@@ -20,6 +20,14 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            p.autor{
+                font-weight: bold;
+            }
+        }
+        img {
+            width: 80px;
+            height: 80px;
         }
      </style>
 </head>
@@ -29,9 +37,21 @@
             <p>aprenda a produzir um site</p>
     </header>
     <main>
-        <h2>exercício de aula do 1 B </h2>
-        <p> Este site é um exercício da aula de educação digital</p>
         <img src="imagem.png" alt="imagem da aula de educação digital">
+        <div> 
+            <h2>exercício de aula do 1 B </h2>
+            <p class="autor">Por: Alexssandra</p>
+            <p> Este site é um exercício da aula de educação digital</p>
+            <button>❤️<span>0</span></button>
+        </div>
     </main>
 </body>
+<script>
+     const botao = document.querySelector("button");
+     botao.addEventListener ("click", botaoClicado);  
+     function botaoClicado () {
+        let texto = botao.querySelector ("span");
+        texto.textContent++;
+     }
+</script>
 </html>
