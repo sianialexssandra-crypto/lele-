@@ -15,7 +15,7 @@
             padding: 2px;
         }
         main{
-            background-color: black;
+            background-color: black; 
             color: beige;
             text-align: center;
             max-width: 800px;
@@ -43,15 +43,18 @@
             <p class="autor">Por: Alexssandra</p>
             <p> Este site é um exercício da aula de educação digital</p>
             <button>❤️<span>0</span></button>
+            <button>💔​<span>0</span></button>
         </div>
     </main>
 </body>
 <script>
-     const botao = document.querySelector("button");
-     botao.addEventListener ("click", botaoClicado);  
-     function botaoClicado () {
+     const botoes = document.querySelector("button");
+     botoes.forEach(function(botao)) {
+            botao.addEventListener ("click", botaoClicado);  
+        function botaoClicado () {
         let texto = botao.querySelector ("span");
         texto.textContent++;
+     }
      }
 </script>
 </html>
